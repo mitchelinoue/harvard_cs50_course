@@ -1,0 +1,51 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Because although it's performance was not the best, in the best scenario it performed better than sort3(selection sort)
+
+sort2 uses: Merge Sort
+
+How do you know?: Because in the worst scenario it performed the best
+
+sort3 uses: Selection Sort
+
+How do you know?: Because even in the best scenario it performed badly
+
+
+                    reversed:
+sort1 5000 = 0.088
+sort2 5000 = 0.021
+sort3 5000 = 0.057
+
+sort1 10000 = 0.303
+sort2 10000 = 0.095
+sort3 10000 = 0.167
+
+sort1 500000 = 6.417
+sort2 500000 = 0.709
+sort3 500000 = 3.705
+
+                    sorted
+sort1 5000 = 0.047
+sort2 5000 = 0.023
+sort3 5000 = 0.055
+
+sort1 10000 = 0.303
+sort2 10000 = 0.032
+sort3 10000 = 0.184
+
+sort1 500000 = 0.819
+sort2 500000 = 0.940
+sort3 500000 = 3.560
+
+                    random
+sort1 5000 = 0.087
+sort2 5000 = 0.017
+sort3 5000 = 0.052
+
+sort1 10000 = 0.314
+sort2 10000 = 0.063
+sort3 10000 = 0.161
+
+sort1 500000 = 7.982
+sort2 500000 = 0.920
+sort3 500000 = 3.635
