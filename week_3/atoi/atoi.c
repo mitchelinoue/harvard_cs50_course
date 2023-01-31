@@ -26,18 +26,16 @@ int main(void)
 int convert(string input)
 {
     // TODO 528/
-    int index = strlen(input);
+    int n = strlen(input);
 
-    if (index <= 0)
+    if (n <= 0)
     {
         return 0;
     }
 
-    int number = input[index - 1] - 48;
+    int number = input[n - 1] - 48;
 
-    input[strlen(input) - 1] = input[strlen(input)];
+    input[n - 1] = input[n];
 
-    convert(input);
-
-    return number + 
+    return  convert(input) * 10 + number;
 }
