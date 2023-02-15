@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function changeColor(color, id)
+            {
+                if (color == 'red')
+                {
+                    let button = document.querySelector(`#${id}`);
+                    let answer = document.querySelector('#answer');
+
+                    button.style.backgroundColor = 'red';
+                    answer.innerHTML = 'Incorrect';
+                }
+                else
+                {
+                    let button = document.querySelector(`#${id}`);
+                    let answer = document.querySelector('#answer');
+                    button.style.backgroundColor = 'green';
+                    answer.innerHTML = 'Correct';
+                }
+            }
+
+            function check()
+            {
+                let guess = document.querySelector('#guess');
+
+                if (guess.value == 'Switzerland' | guess.value == 'switzerland')
+                {
+                    let answer = document.querySelector('#answer2');
+                    guess.style.backgroundColor = 'green';
+                    answer.innerHTML = 'Correct';
+                }
+                else
+                {
+                    let answer = document.querySelector('#answer2');
+                    guess.style.backgroundColor = 'red';
+                    answer.innerHTML = 'Incorrect';
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the approximate ratio of people to sheep in New Zeland?</h3>
+                <button id="one" onclick="changeColor('red', 'one')">6 people per 1 sheep</button>
+                <button id="two" onclick="changeColor('red', 'two')">3 people per 1 sheep</button>
+                <button id="three" onclick="changeColor('red', 'three')">1 person per 1 sheep</button>
+                <button id="four" onclick="changeColor('red', 'four')">1 person per 3 sheep</button>
+                <button id="five" onclick="changeColor('green', 'five')">1 person per 6 sheep</button>
+                <p id="answer"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>In wich country is it illegal to own only guinea pig, as a lone guinea pig might get lonely?</h3>
+                <input id="guess">
+                <button onclick="check()">Check answer!</button>
+                <p id="answer2"></p>
+            </div>
+        </div>
+    </body>
+</html>
